@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Text Extension",
+  "version": "0.1",
+  "description": "Chrome Extension to download and summarize text",
+  "author": "Harsini",
+  
+    "action": {
+      "default_title": "Show features",
+      "default_popup":"index.html"
+    },
+    "host_permissions": [
+      "http://*/*",
+      "https://*/"
+    ],
+  "permissions": ["tabs","storage", "declarativeContent", "activeTab", "scripting"],
+  "content_scripts": [
+      {
+          "matches":["<all_urls>"],
+          "js":["content.js"]
+      }
+  ]
+  
+}
